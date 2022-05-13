@@ -1,0 +1,38 @@
+#main {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.student {
+    padding: 10px;
+    text-align: left;
+    margin-top: 15px;
+    min-width: 100%;
+    background-color: blueviolet;
+}
+
+.students {
+    display: flex;
+    flex-flow: row;
+    width: max-content;
+}
+
+@media(min-width: 800px){
+    .student {
+        min-width: 300px;
+    }
+}
+
+#input_div {
+    position: absolute;
+    top: 50%;
+}
+
+#logout {
+    margin: 20px;
+}
+
+#login {
+    margin: 15px;
+}
