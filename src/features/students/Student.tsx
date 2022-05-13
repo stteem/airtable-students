@@ -35,10 +35,10 @@ export function Student() {
     
 
     return (      
-        <div id={styles.main}>
-            <div>
+        <div>
+            <div id={styles.main}>
                 {
-                    students.map((student:ClassState, index:any) => {
+                    students.map((student:ClassState, index:number) => {
                         return(
                             <div className={styles.student} key={index}>
                                 <h4>Name</h4>
@@ -46,7 +46,7 @@ export function Student() {
                                 <h4>Students</h4>
                                 <p className={styles.students}>
                                 {
-                                    student.Students.map((item:string, index:any) => {
+                                    student.Students.map((item:string, index:number) => {
                                         
                                         if (index + 1 === student.Students.length) {
                                             return(
@@ -79,18 +79,19 @@ export function Student() {
                                 : null
 
                             }
-                            <label htmlFor='student' >Student Name: </label>
+                            <label htmlFor='student'>Student Name: </label>
                             <input type="text" 
                                 placeholder="Search a student by name" 
                                 value={text}
                                 onChange={handleChange} 
                                 id="student"
-                                name='student'
+                                data-testid="input-display"
+                                className='name-input'
                                 required
                             />
                             
                             <div id={styles.login}>
-                                <button type='button' onClick={handleClick}>Login</button>
+                                <button data-testid="login-btn-display"  type='button' onClick={handleClick}>Login</button>
                             </div>
                             
                         </div>

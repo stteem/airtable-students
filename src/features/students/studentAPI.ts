@@ -1,11 +1,14 @@
 import { baseUrl } from "../../app/baseurl";
 import { AppThunk } from '../../app/store';
 import { logout } from './studentSlice';
+import axios from "axios";
 
 
 export const studentPayload = (payload:any) => {
     return payload;
 }
+
+
 
 export const fetchStudent = (name: string)/*: AppThunk => (dispatch)*/ => {
 

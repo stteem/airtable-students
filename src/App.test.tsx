@@ -1,15 +1,23 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(
-    <Provider store={store}>
-      <App />
-    </Provider>
-  );
+describe("Student Name", () => {
+  test('renders input label "Student Name"', () => {
+    const { getByText, debug, rerender } = render(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    );
+  
+    expect(getByText(/Student Name/i)).toBeInTheDocument();
+    expect(screen.getByText(/Login/i)).toBeInTheDocument();
 
-  expect(getByText(/learn/i)).toBeInTheDocument();
-});
+    //screen.debug();
+  });
+})
+
+
+
