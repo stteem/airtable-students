@@ -48,7 +48,7 @@ export function Student() {
                                 {
                                     student.Students.map((item:string, index:any) => {
                                         
-                                        if (index + 1 == student.Students.length) {
+                                        if (index + 1 === student.Students.length) {
                                             return(
                                                 <span key={index}>{item}&nbsp;</span>
                                             );
@@ -68,11 +68,11 @@ export function Student() {
                 }
                 
                 {
-                    students.length == 0 ?
+                    students.length === 0 ?
                     <>
                         <div id={styles.input_div}>
                             {
-                                status == "loading" ?
+                                status === "loading" ?
                                     <>
                                         <div>{status}...</div>
                                     </>
